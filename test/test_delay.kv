@@ -1,0 +1,11 @@
+<TimeDelay>:
+    name: "delay"
+    FloatLayout:
+        ButtonDelay:
+            color: 0,1,0,1
+            font_size: 25
+            size_hint: 0.3,0.2
+            text: "Start Prank"
+            pos_hint: {'center_x':0.5,'top':0.5}
+            ##on_press: root.manager.current = "main"
+            on_press: self.clocked_switch()

@@ -1,0 +1,13 @@
+<MainScreen>:
+    name: "main"
+    FloatLayout:
+        canvas:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    Button:
+        background_color: 1, .8, .3, 1
+        text:'Home'
+        size_hint: .8,.2
+        pos_hint: {'center_x':.5,'y':.1}
+        on_press: root.manager.current = "delay"
