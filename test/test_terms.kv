@@ -1,0 +1,63 @@
+#: import utils kivy.utils
+
+<Terms>:
+    name: "terms"
+    id: terms
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#3D2020")
+            Rectangle:
+                pos: self.pos
+                size: self.size
+            Color:
+                rgb: utils.get_color_from_hex("#DCC3C3")
+            Rectangle:
+                pos: self.center_x - 75, self.center_y - 100
+                size: 150, 180
+
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": 0.9, "left": 1}
+            size_hint: 1, .2
+
+            Image:
+                source: "icons/terms.png"
+
+        Label:
+            rows: 1
+            pos_hint: {"top": 0.7, "left": 1}
+            size_hint: 1, .1
+            text: "Terms & Conditions"
+            id: terms_label
+
+
+        Label:
+
+            rows: 3
+            background_color: 1, 1, 1, 1
+            pos_hint: {"top": 0.8, "left": 1}
+            size_hint: 1, .5
+            text: 'This is line 1.\nThis is line 2.\nThis is line 3.\nThis is line 4.'
+            id: text_label
+
+        Label:
+            rows: 3
+            pos_hint: {"top": 0.4, "left": 1}
+            size_hint: 1, .2
+            text: "Accept Conditions"
+            id: accept_label
+
+        CheckBox:
+            pos_hint: {"top": 0.3, "left": 1}
+            size_hint: 1, .1
+            group: 'check'
+            id : check_box
+
+        Button:
+            background_color: 1, .8, .3, 1
+            size_hint: .3,.1
+            pos_hint: {'center_x':.5,'y':.1}
+            text: "Continue"
+            id: terms
+            on_press: root.manager.current = "main"

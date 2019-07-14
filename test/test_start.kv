@@ -1,0 +1,32 @@
+#: import utils kivy.utils
+
+<StartScreen>:
+    name: "start"
+    id: start
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#3D2020")
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": 0.8, "left": 1}
+            size_hint: 1, .5
+
+            Image:
+                source: "icons/camera-flash.jpg"
+        Label:
+            rows: 1
+            pos_hint: {"top": 0.9, "left": 1}
+            size_hint: 1, .1
+            text: "Hobblinder App"
+            id: start
+        Button:
+            background_color: 1, .8, .3, 1
+            size_hint: .3,.1
+            pos_hint: {'center_x':.5,'y':.1}
+            text: "Start"
+            id: start
+            on_press: root.manager.current = "terms"
